@@ -6,6 +6,7 @@
                     <div class="layout-logo"></div>
                     <div class="layout-search">
                         <slot name="search"></slot>
+                        <!-- <search></search>  -->
                     </div>
                 </div>
                 <div class="layout-nav">
@@ -30,10 +31,10 @@
         </Menu>
     </div>
     <div class="mobile-menu">
-        <div class="munu-but-mb">
-         <Icon @click="value1 = true" type="ios-menu" />
-        </div>
-        <slot name="searchmb"></slot>
+       <div class="logo-search">
+            <Button @click="value1 = true" type="primary">菜单</Button>
+            <div class="layout-logo"></div>
+       </div>
         <Drawer  title="Basic Drawer"  placement="left" :closable="true" v-model="value1">
             <p>Some contents...</p>
             <p>Some contents...</p>
@@ -51,9 +52,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between
-    }
-    .ivu-menu-dark{
-        background: transparent;
     }
     .pc-menu{
         .logo-search{
@@ -82,30 +80,38 @@
     }
     .mobile-menu{
         height: 100%;
-        display: none;
+        display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;  
-        .munu-but-mb{
-            flex:0 0  100px;
+        justify-content: center;
+        align-items: center;
+        .logo-search{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .layout-logo{
+                flex: 0 1 100px;
+                height: 30px;
+                background: #5b6270;
+                border-radius: 3px;
+                position: relative;
+            }
+
         }
+       
     }
     
 }
-@media only screen and (max-width: 750px) {
+
+@media screen and (max-width: 750px) {
     .pc-menu {
         display: none;
     }
-    .mobile-menu {
-        display: flex !important;
-    }
 }
-@media only screen and (min-width: 750px) {
+@media screen and (min-width: 750px) {
     .mobile-menu {
         display: none;
-    }
-     .pc-menu {
-        display: block !important;
     }
 }
 </style>

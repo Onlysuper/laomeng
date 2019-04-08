@@ -1,10 +1,13 @@
 <template>
     <div class="layout">
         <Layout>
-            <Header :style="{position: 'fixed', width: '100%',zIndex:'1'}">
+            <Header :style="{position: 'fixed', width: '100%',zIndex:'1',background:'#fff'}">
                 <Mmenu>
                     <template v-slot:search>
                         <Search></Search>
+                    </template>
+                    <template v-slot:searchmb>
+                        <SearchMb></SearchMb>
                     </template>
                 </Mmenu>
             </Header>
@@ -30,6 +33,9 @@
         .ivu-layout,.ivu-layout-content,.ivu-layout-footer{
             background: transparent !important; 
         }
+        .ivu-layout-header{
+            padding: 0 30px
+        }
     }
     .layout-footer-center{
         text-align: center;
@@ -38,10 +44,12 @@
 <script>
 import Mmenu from  "@/components/m-Menu/index.vue";
 import Search from  "@/components/m-Search/index.vue";
+import SearchMb from  "@/components/m-SearchMb/index.vue";
 export default {
     components:{
         Mmenu,
-        Search
+        Search,
+        SearchMb
     }
 }
 </script>

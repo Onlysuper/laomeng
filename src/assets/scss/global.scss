@@ -1,3 +1,6 @@
 body{
     background-color: #f8f8f9 !important;
 }
+input,input:focus,input:link,input:hover{
+    outline: none;
+}
