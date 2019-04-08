@@ -2,14 +2,14 @@
     <div class="layout">
         <Layout>
             <Header :style="{position: 'fixed', width: '100%',zIndex:'1',background:'#fff'}">
-                <Mmenu>
+                <m-header>
                     <template v-slot:search>
                         <Search></Search>
                     </template>
                     <template v-slot:searchmb>
                         <SearchMb></SearchMb>
                     </template>
-                </Mmenu>
+                </m-header>
             </Header>
             <Content :style="{margin: '88px auto 0', width: '90%',background: '#fff', minHeight: '500px'}">
                 <div>
@@ -42,12 +42,12 @@
     }
 </style>
 <script>
-import Mmenu from  "@/components/m-Menu/index.vue";
+import mHeader from  "@/components/m-Header/index.vue";
 import Search from  "@/components/m-Search/index.vue";
 import SearchMb from  "@/components/m-SearchMb/index.vue";
 export default {
     components:{
-        Mmenu,
+        mHeader,
         Search,
         SearchMb
     }

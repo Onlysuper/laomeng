@@ -1,119 +1,48 @@
 <template>
-<div class="menu-container">
-    <div class="pc-menu">
-        <Menu  mode="horizontal" theme="dark" active-name="1">
-                <div class="logo-search">
-                    <div class="layout-logo"></div>
-                    <div class="layout-search">
-                        <slot name="search"></slot>
-                    </div>
-                </div>
-                <div class="layout-nav">
-                    <MenuItem name="1">
-                        <Icon type="ios-navigate"></Icon>
-                        Item 1
-                    </MenuItem>
-                    <MenuItem name="2">
-                        <Icon type="ios-keypad"></Icon>
-                        Item 2
-                    </MenuItem>
-                    <MenuItem name="3">
-                        <Icon type="ios-analytics"></Icon>
-                        Item 3
-                    </MenuItem>
-                    <MenuItem name="4">
-                        <Icon type="ios-paper"></Icon>
-                        Item 4
-                    </MenuItem>
-                
-                </div>
-        </Menu>
-    </div>
-    <div class="mobile-menu">
-        <div class="munu-but-mb">
-         <Icon @click="value1 = true" type="ios-menu" />
-        </div>
-        <slot name="searchmb"></slot>
-        <Drawer  title="Basic Drawer"  placement="left" :closable="true" v-model="value1">
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-        </Drawer>
-    </div>
-        
-</div>
+ <Menu mode="horizontal" theme="light" active-name="1">
+    <MenuItem name="1">
+        <Icon type="ios-paper" />
+        内容管理
+    </MenuItem>
+    <MenuItem name="2">
+        <Icon type="ios-people" />
+        用户管理
+    </MenuItem>
+    <Submenu name="3">
+        <template slot="title">
+            <Icon type="ios-stats" />
+            统计分析
+        </template>
+        <MenuGroup title="使用">
+            <MenuItem name="3-1">新增和启动</MenuItem>
+            <MenuItem name="3-2">活跃分析</MenuItem>
+            <MenuItem name="3-3">时段分析</MenuItem>
+        </MenuGroup>
+        <MenuGroup title="留存">
+            <MenuItem name="3-4">用户留存</MenuItem>
+            <MenuItem name="3-5">流失用户</MenuItem>
+        </MenuGroup>
+    </Submenu>
+    <MenuItem name="4">
+        <Icon type="ios-construct" />
+        综合设置
+    </MenuItem>
+</Menu>
    
 </template>
 <style lang="scss">
-.menu-container{
-    height: 100%;
-    .ivu-menu-horizontal{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between
-    }
-    .ivu-menu-dark{
-        background: transparent;
-    }
-    .pc-menu{
-        .logo-search{
-            flex: 1;
-            display: flex;
-            .layout-logo{
-                flex: 0 1 100px;
-                height: 30px;
-                background: #5b6270;
-                border-radius: 3px;
-                float: left;
-                position: relative;
-                top: 15px;
-            }
-            .layout-search{
-                flex: 1;
-            }
-        }
-    
-        .layout-nav{
-            // flex: 0 1 420px;
-            flex:1;
-            margin: 0 auto;
-            margin-right: 20px;
-        }
-    }
-    .mobile-menu{
-        height: 100%;
-        display: none;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;  
-        .munu-but-mb{
-            flex:0 0  100px;
-        }
-    }
-    
-}
-@media only screen and (max-width: 750px) {
-    .pc-menu {
-        display: none;
-    }
-    .mobile-menu {
-        display: flex !important;
-    }
-}
-@media only screen and (min-width: 750px) {
-    .mobile-menu {
-        display: none;
-    }
-     .pc-menu {
-        display: block !important;
-    }
+// .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-item:hover, .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-submenu-active, .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-submenu:hover{
+//     color:#515a6e !important
+// }
+.ivu-menu-light.ivu-menu-horizontal .ivu-menu-item, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu{
+     color:#515a6e !important
 }
 </style>
 <script>
 export default {
+    props:['mode'],
     data(){
         return {
-            value1:false
         }
     }
 }

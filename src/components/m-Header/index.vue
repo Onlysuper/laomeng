@@ -6,39 +6,21 @@
                     <div class="layout-logo"></div>
                     <div class="layout-search">
                         <slot name="search"></slot>
-                        <!-- <search></search>  -->
                     </div>
                 </div>
                 <div class="layout-nav">
-                    <MenuItem name="1">
-                        <Icon type="ios-navigate"></Icon>
-                        Item 1
-                    </MenuItem>
-                    <MenuItem name="2">
-                        <Icon type="ios-keypad"></Icon>
-                        Item 2
-                    </MenuItem>
-                    <MenuItem name="3">
-                        <Icon type="ios-analytics"></Icon>
-                        Item 3
-                    </MenuItem>
-                    <MenuItem name="4">
-                        <Icon type="ios-paper"></Icon>
-                        Item 4
-                    </MenuItem>
-                
+                     <MmenuMb mode="horizontal"></MmenuMb>
+                    <!-- <Mmenu mode="horizontal"></Mmenu> -->
                 </div>
         </Menu>
     </div>
     <div class="mobile-menu">
-       <div class="logo-search">
-            <Button @click="value1 = true" type="primary">菜单</Button>
-            <div class="layout-logo"></div>
-       </div>
-        <Drawer  title="Basic Drawer"  placement="left" :closable="true" v-model="value1">
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+        <div class="munu-but-mb">
+         <Icon @click="value1 = true" type="ios-menu" />
+        </div>
+        <slot name="searchmb"></slot>
+        <Drawer  title="xxx"  placement="left" :closable="true" v-model="value1">
+            <MmenuMb mode="vertical"></MmenuMb>
         </Drawer>
     </div>
         
@@ -52,6 +34,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between
+    }
+    .ivu-menu-dark{
+        background: transparent;
     }
     .pc-menu{
         .logo-search{
@@ -80,47 +65,45 @@
     }
     .mobile-menu{
         height: 100%;
-        display: flex;
+        display: none;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        .logo-search{
-            flex: 1;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            .layout-logo{
-                flex: 0 1 100px;
-                height: 30px;
-                background: #5b6270;
-                border-radius: 3px;
-                position: relative;
-            }
-
+        justify-content: space-between;
+        align-items: center;  
+        .munu-but-mb{
+            flex:0 0  100px;
         }
-       
     }
     
 }
-
-@media screen and (max-width: 750px) {
+@media only screen and (max-width: 750px) {
     .pc-menu {
         display: none;
     }
+    .mobile-menu {
+        display: flex !important;
+    }
 }
-@media screen and (min-width: 750px) {
+@media only screen and (min-width: 750px) {
     .mobile-menu {
         display: none;
+    }
+     .pc-menu {
+        display: block !important;
     }
 }
 </style>
 <script>
+import Mmenu from  "@/components/m-Menu/index.vue";
+import MmenuMb from  "@/components/m-Menu-Mb/index.vue";
 export default {
     data(){
         return {
             value1:false
         }
+    },
+    components:{
+        Mmenu,
+        MmenuMb
     }
 }
 </script>
