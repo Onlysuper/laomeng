@@ -18,6 +18,9 @@
             </Content>
             <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
         </Layout>
+        <template>
+            <BackTop></BackTop>
+        </template>
     </div>
 </template>
 <style lang='scss'>
@@ -39,6 +42,9 @@
     }
     .layout-footer-center{
         text-align: center;
+    }
+    .ivu-layout-header{
+        box-shadow: 0 1px 1px rgba(0,0,0,.08)
     }
 </style>
 <script>

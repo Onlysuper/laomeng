@@ -3,14 +3,13 @@
     <div class="pc-menu">
         <Menu  mode="horizontal" theme="dark" active-name="1">
                 <div class="logo-search">
-                    <div class="layout-logo"></div>
-                    <div class="layout-search">
+                    <div class="layout-logo">logo</div>
+                    <!-- <div class="layout-search">
                         <slot name="search"></slot>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="layout-nav">
                      <MmenuMb mode="horizontal"></MmenuMb>
-                    <!-- <Mmenu mode="horizontal"></Mmenu> -->
                 </div>
         </Menu>
     </div>
@@ -30,6 +29,8 @@
 <style lang="scss">
 .menu-container{
     height: 100%;
+    width: 90%;
+    margin: 0 auto;
     .ivu-menu-horizontal{
         display: flex;
         flex-direction: row;
@@ -45,7 +46,7 @@
             .layout-logo{
                 flex: 0 1 100px;
                 height: 30px;
-                background: #5b6270;
+                // background: #5b6270;
                 border-radius: 3px;
                 float: left;
                 position: relative;
@@ -58,7 +59,7 @@
     
         .layout-nav{
             // flex: 0 1 420px;
-            flex:1;
+            // flex:1;
             margin: 0 auto;
             margin-right: 20px;
         }
@@ -70,7 +71,7 @@
         justify-content: space-between;
         align-items: center;  
         .munu-but-mb{
-            flex:0 0  100px;
+            flex:0 0  50px;
         }
     }
     

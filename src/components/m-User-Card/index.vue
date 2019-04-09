@@ -1,9 +1,8 @@
 <template>
     <article class="m-list">
-        23
-        <!-- <h1>xx的名片</h1>
+        <h1>文章选项</h1>
         <p>现居：四川省-成都市</p>
-        <p>Email：dancesmiling@qq.com</p> -->
+        <p>Email：dancesmiling@qq.com</p>
     </article>
 </template>
 <style lang="scss" scoped>
