@@ -1,6 +1,6 @@
 <template>
 <Menu theme="light" active-name="1" :mode='mode'>
-        <MenuItem name="1">
+        <MenuItem @click.native="goUrl" name="1">
             <!-- <Icon type="md-document" /> -->
             首页
         </MenuItem>
@@ -40,6 +40,11 @@ export default {
     props:['mode'],
     data(){
         return {
+        }
+    },
+    methods:{
+        goUrl(){
+            this.$router.push({path:"./"})
         }
     }
 }

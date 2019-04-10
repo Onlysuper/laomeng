@@ -2,7 +2,8 @@
    <div class="home-page">
         <Row justify="center">
             <Col :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
-                <mlist></mlist> 
+               <mlist @handle="articleDetail" :list="list"></mlist> 
+               <mLoadingBut :loading="loading" @handle="loadMore"></mLoadingBut>
             </Col>
             <Col  :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
                 <div class="aside-right">
@@ -19,21 +20,42 @@
 </style>
 <script>
 import mlist from  "@/components/m-List/index.vue";
+import mLoadingBut from  "@/components/m-Loading-But/index.vue";
 import mUserCard from  "@/components/m-User-Card/index.vue";
-import {getArticalLists} from "@/http/api"
+import {getArticleLists} from "@/http/api"
 export default {
+    data(){
+        return {
+            loading:false,
+            list:[],
+        }
+    },
     components:{
+        mLoadingBut,
         mlist,
         mUserCard
     },
     methods:{
+        // 加载更多
+       loadMore(){
+           this.loading=true;
+           this.getList();
+       },
        getList(){
-           getArticalLists()({}).then(res=>{
+           getArticleLists()({}).then(res=>{
+               this.loading=false;
                if(res.code=='00'){
-
+                   this.list = [...this.list,...res.data];
                }else{
-
+                    this.$Message.warning('This is a warning tip');
                }
+           })
+       },
+       // 详情页面
+       articleDetail(item){
+           console.log(1321);
+           this.$router.push({
+               name:"articleDetail"
            })
        }
     },
@@ -43,7 +65,6 @@ export default {
 }
 </script>
 <style>
-.aside-right{
-}
+
 </style>
 

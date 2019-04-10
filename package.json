@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
+    "highlight.js": "^9.15.6",
     "iview": "^3.3.3",
     "qs": "^6.7.0",
     "vue": "^2.6.6",

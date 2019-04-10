@@ -1,0 +1,50 @@
+<template>
+   <div >
+        <Row justify="center">
+            <Col :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
+                {{article}}
+                <div v-highlight  class="code"></div>
+            </Col>
+            <Col  :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
+                <div class="aside-right">
+                     <Affix :offset-top="90">
+                        <m-user-card></m-user-card>
+                     </Affix>
+                </div>
+            </Col>
+        </Row>
+       
+   </div>
+</template>
+<style lang='scss'>
+</style>
+<script>
+import { getArticleDetail } from "@/http/api"
+import mUserCard from  "@/components/m-User-Card/index.vue";
+export default {
+     components:{
+        mUserCard
+    },
+    data(){
+       return {
+           article:{}
+       }
+    },
+    methods:{
+        init(){
+            getArticleDetail()({}).then(res=>{
+                console.log(res);
+                if(res.code=='00'){
+                    this.article=res.data
+                }
+            })
+        }
+    },
+    mounted(){
+        this.init();
+    }
+}
+</script>
+<style>
+</style>
+

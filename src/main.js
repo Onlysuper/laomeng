@@ -5,6 +5,8 @@ import store from './store/index';
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 Vue.use(iView);
+import Highlight from '@/components/Hightlight.js'
+Vue.use(Highlight)
 Vue.config.productionTip = false
 
 new Vue({
