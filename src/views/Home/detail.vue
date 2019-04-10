@@ -8,7 +8,8 @@
             <Col  :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
                 <div class="aside-right">
                      <Affix :offset-top="90">
-                        <m-user-card></m-user-card>
+                        <m-Article-Author></m-Article-Author>
+                        <m-Article></m-Article>
                      </Affix>
                 </div>
             </Col>
@@ -20,10 +21,12 @@
 </style>
 <script>
 import { getArticleDetail } from "@/http/api"
-import mUserCard from  "@/components/m-User-Card/index.vue";
+import mArticleAuthor from  "@/components/m-Article-Author/index.vue";
+import mArticle from  "@/components/m-Article/index.vue";
 export default {
      components:{
-        mUserCard
+        mArticleAuthor,
+        mArticle
     },
     data(){
        return {

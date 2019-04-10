@@ -9,6 +9,7 @@
                 <div class="aside-right">
                      <Affix :offset-top="90">
                         <m-user-card></m-user-card>
+                        <m-type-tag></m-type-tag>
                      </Affix>
                 </div>
             </Col>
@@ -22,6 +23,7 @@
 import mlist from  "@/components/m-List/index.vue";
 import mLoadingBut from  "@/components/m-Loading-But/index.vue";
 import mUserCard from  "@/components/m-User-Card/index.vue";
+import mTypeTag from  "@/components/m-Type-Tag/index.vue";
 import {getArticleLists} from "@/http/api"
 export default {
     data(){
@@ -33,7 +35,8 @@ export default {
     components:{
         mLoadingBut,
         mlist,
-        mUserCard
+        mUserCard,
+        mTypeTag
     },
     methods:{
         // 加载更多
