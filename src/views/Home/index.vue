@@ -8,7 +8,7 @@
             <Col  :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
                 <div class="aside-right">
                      <Affix :offset-top="90">
-                        <m-user-card></m-user-card>
+                        <m-article-type></m-article-type>
                         <m-type-tag></m-type-tag>
                      </Affix>
                 </div>
@@ -22,7 +22,7 @@
 <script>
 import mlist from  "@/components/m-List/index.vue";
 import mLoadingBut from  "@/components/m-Loading-But/index.vue";
-import mUserCard from  "@/components/m-User-Card/index.vue";
+import mArticleType from  "@/components/m-Article-Type/index.vue";
 import mTypeTag from  "@/components/m-Type-Tag/index.vue";
 import {getArticleLists} from "@/http/api"
 export default {
@@ -35,7 +35,7 @@ export default {
     components:{
         mLoadingBut,
         mlist,
-        mUserCard,
+        mArticleType,
         mTypeTag
     },
     methods:{
