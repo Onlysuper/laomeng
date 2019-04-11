@@ -1,4 +1,5 @@
 <template>
+<div>
     <Dropdown  @on-click="handleClick" class="language-box">
         <a href="javascript:void(0)">
             {{lang}}
@@ -24,6 +25,7 @@
             
         </DropdownMenu>
     </Dropdown>
+</div>
 </template>
 <style lang="scss">
 @import "../../assets/scss/global.scss";
@@ -50,6 +52,7 @@
 }
 </style>
 <script>
+import utils from "@/common/utils.js"
 export default {
     data(){
         return {
@@ -61,7 +64,7 @@ export default {
             if(lang=='chinese'){
                 this.lang = "中文简体"
             }
-             if(lang=='english'){
+            if(lang=='english'){
                 this.lang = "English"
             }
         }
@@ -69,10 +72,10 @@ export default {
     watch:{
         lang(lang){
             if(lang=="中文简体"){
-
+                this.$i18n.locale = 'zh-CN'
             }
             if(lang=="English"){
-                
+                this.$i18n.locale = 'en-US'
             }
         }
     }

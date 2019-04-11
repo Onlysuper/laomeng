@@ -62,7 +62,10 @@
         }
         .header-right{
             flex: 1;
-            text-align: right
+            text-align: right;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end
         }
         .layout-nav{
             margin: 0 auto;

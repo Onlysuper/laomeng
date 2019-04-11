@@ -2,19 +2,19 @@
 <Menu theme="light" active-name="1" :mode='mode'>
         <MenuItem @click.native="goUrl" name="1">
             <!-- <Icon type="md-document" /> -->
-            首页
+             {{ $t("home") }}
         </MenuItem>
         <MenuItem name="2">
             <!-- <Icon type="md-chatbubbles" /> -->
-            技术咖
+             {{ $t("technology") }}
         </MenuItem>
         <MenuItem name="3">
             <!-- <Icon type="md-heart" /> -->
-            生活家
+            {{ $t("life") }}
         </MenuItem>
         <MenuItem name="4">
             <!-- <Icon type="md-leaf" /> -->
-            关于我
+           {{ $t("about") }}
         </MenuItem>
 </Menu> 
    
