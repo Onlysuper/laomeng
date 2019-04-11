@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <Layout>
-            <Header :style="{position: 'fixed', width: '100%',zIndex:'1',background:'#fff'}">
+            <Header :style="{position: 'fixed', width: '100%',zIndex:'11',background:'#fff'}">
                 <m-header>
                     <template v-slot:search>
                         <Search></Search>
@@ -24,7 +24,7 @@
     </div>
 </template>
 <style lang='scss'>
-  @import url(../../assets/scss/global.scss); 
+  @import "../../assets/scss/global.scss";
 </style>
 <style scoped lang='scss'>
     .layout{

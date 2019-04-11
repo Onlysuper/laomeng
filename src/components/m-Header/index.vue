@@ -2,14 +2,15 @@
 <div class="menu-container">
     <div class="pc-menu">
         <Menu  mode="horizontal" theme="dark" active-name="1">
-                <div class="logo-search">
-                    <div class="layout-logo">logo</div>
-                    <!-- <div class="layout-search">
-                        <slot name="search"></slot>
-                    </div> -->
+                <div class="logo-box">
+                    <div class="layout-logo"></div>
                 </div>
                 <div class="layout-nav">
                      <MmenuMb mode="horizontal"></MmenuMb>
+                </div>
+                <div class="header-right">
+                    <slot name="search"></slot>
+                    <m-language></m-language>
                 </div>
         </Menu>
     </div>
@@ -27,6 +28,7 @@
    
 </template>
 <style lang="scss">
+@import "../../assets/scss/global.scss";
 .menu-container{
     height: 100%;
     width: 90%;
@@ -40,26 +42,29 @@
         background: transparent;
     }
     .pc-menu{
-        .logo-search{
-            flex: 1;
+        .logo-box{
+            flex: 0 1 120px;
             display: flex;
             .layout-logo{
+                background: url('../../assets/img/logo.png');
+                background-size: 100%;
                 flex: 0 1 100px;
-                height: 30px;
-                // background: #5b6270;
+                height: 42px;
+                line-height: 42px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 32px;
                 border-radius: 3px;
                 float: left;
                 position: relative;
-                top: 15px;
-            }
-            .layout-search{
-                flex: 1;
+                top: 6px;
             }
         }
-    
+        .header-right{
+            flex: 1;
+            text-align: right
+        }
         .layout-nav{
-            // flex: 0 1 420px;
-            // flex:1;
             margin: 0 auto;
             margin-right: 20px;
         }
@@ -96,6 +101,7 @@
 <script>
 import Mmenu from  "@/components/m-Menu/index.vue";
 import MmenuMb from  "@/components/m-Menu-Mb/index.vue";
+import mLanguage from  "@/components/m-Language/index.vue";
 export default {
     data(){
         return {
@@ -104,7 +110,8 @@ export default {
     },
     components:{
         Mmenu,
-        MmenuMb
+        MmenuMb,
+        mLanguage
     }
 }
 </script>

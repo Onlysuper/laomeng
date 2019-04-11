@@ -1,9 +1,11 @@
 <template>
    <div >
         <Row justify="center">
-            <Col :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
+            <Col v-highlight :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
                 {{article}}
-                <div v-highlight  class="code"></div>
+                <div class="code">
+                    <p></p>
+                </div>
             </Col>
             <Col  :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
                 <div class="aside-right">
@@ -18,6 +20,7 @@
    </div>
 </template>
 <style lang='scss'>
+@import "../../assets/scss/global.scss";
 </style>
 <script>
 import { getArticleDetail } from "@/http/api"

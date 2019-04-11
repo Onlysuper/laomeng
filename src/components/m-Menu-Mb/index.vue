@@ -14,14 +14,15 @@
         </MenuItem>
         <MenuItem name="4">
             <!-- <Icon type="md-leaf" /> -->
-            留言
+            关于我
         </MenuItem>
 </Menu> 
    
 </template>
 <style lang="scss">
+@import "../../assets/scss/global.scss";
 .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-item:hover, .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-submenu-active, .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-submenu:hover{
-    color:red !important;
+    color:$main-color;
     border:0px !important;
 }
 .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item, .ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu{
@@ -29,7 +30,7 @@
       border:0px !important;
 }
 .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-item-active{
-    color: red !important;
+    color: $main-color !important;
 }
 .ivu-menu-horizontal.ivu-menu-light:after{
     display: none !important;

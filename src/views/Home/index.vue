@@ -1,15 +1,15 @@
 <template>
    <div class="home-page">
         <Row justify="center">
-            <Col :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
+            <Col :xs="{ span: 22, offset: 1 }" :ms="{ span: 22, offset: 1 }" :md="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
                <mlist @handle="articleDetail" :list="list"></mlist> 
                <mLoadingBut :loading="loading" @handle="loadMore"></mLoadingBut>
             </Col>
-            <Col  :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
+            <Col  :xs="{ span: 22, offset: 1 }" :ms="{ span: 22, offset: 1 }" :md="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
                 <div class="aside-right">
                      <Affix :offset-top="90">
                         <m-article-type></m-article-type>
-                        <m-type-tag></m-type-tag>
+                        <!-- <m-type-tag></m-type-tag> -->
                      </Affix>
                 </div>
             </Col>
@@ -17,7 +17,7 @@
    </div>
 </template>
 <style lang='scss'>
-//   @import url(../../assets/scss/global.scss); 
+  @import "../../assets/scss/global.scss";
 </style>
 <script>
 import mlist from  "@/components/m-List/index.vue";

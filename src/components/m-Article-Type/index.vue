@@ -35,7 +35,7 @@
     </article>
 </template>
 <style lang="scss" scoped>
-@import url(../../assets/scss/global.scss); 
+@import "../../assets/scss/global.scss";
 .m-card{
     background: #fff;
     display: flex;

@@ -33,6 +33,7 @@
     </div>
 </template>
 <style lang="scss" scoped>
+@import "../../assets/scss/global.scss";
 .m-list-container{
     width:100%;
     .m-list{
@@ -56,7 +57,7 @@
             flex-direction: row;
             justify-content: space-between;
             .comment-icon{
-                color:red;
+                color:$main-color;
                 icon{
                     
                 }
