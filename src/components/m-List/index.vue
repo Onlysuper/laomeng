@@ -1,21 +1,18 @@
 <template>
     <div class="m-list-container">
-        <!-- <Scroll :on-reach-bottom="handleReachEdge" height="100%"> -->
-            <article class="m-list" v-for="(item,index) in list" :key="index" @click="handle(item)">
-                <div>
-                    <Time :time="time1" />
-                </div>
-                <h1>{{item.title}}</h1>
+            <article class="m-list" v-for="(item,index) in list" :key="index">
+                <h2 class="m-title" @click="handle(item)">{{item.title}}</h2>
                 <div class="content">
                     <Row>
-                        <Col :xs="22" :sm="22" :md="18" :lg="18">
-                        <p>{{item.describe}}</p>
+                        <Col :xs="24" :sm="24" :md="4" :lg="5">
+                            <div class="img-wrap" @click="handle(item)">
+                                <!-- <img :src="item.img" alt=""> -->
+                            </div>  
                         </Col>
-                        <Col :xs="22" :sm="22" :md="4" :lg="4">
-                        <div class="img-wrap">
-                            <img :src="item.img" alt="">
-                        </div>  
+                        <Col :xs="24" :sm="24" :md="18" :lg="{ span: 18,offset: 1}">
+                            <p>{{item.describe}}</p>
                         </Col>
+                       
                     </Row>
                 </div>
                 <div class="footer">
@@ -29,7 +26,6 @@
                     </div>
                 </div>
             </article>
-        <!-- </Scroll> -->
     </div>
 </template>
 <style lang="scss" scoped>
@@ -42,17 +38,28 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
-        h1{
-
+        .m-title{
+            font-size: 18px;
+            font-weight: normal;
+            color:$m-tcolor1;
+            cursor: pointer;
         }
         .content{
+            margin-top: 15px;
+            color:$m-tcolor2;
+            font-size: 14px;
             .img-wrap{
+                width: 100%;
+                min-height: 120px;
+                background:#eee;
+                cursor: pointer;
                 img{
                     max-width: 100%;
                 }
             }
         }
         .footer{
+            margin-top: 15px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;

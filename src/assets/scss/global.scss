@@ -8,6 +8,8 @@ $m-color3:#999;
 $m-color4:#e5e5e5;
 $m-color5:#f2f2f2;
 $m-color6:#ffffff;
+$m-tcolor1:#17233d;
+$m-tcolor2:#616776;
 @mixin flex-row {
    display: flex;
    flex-direction: row;
@@ -27,6 +29,13 @@ body{
 }
 input,input:focus,input:link,input:hover{
     outline: none;
+}
+.ivu-layout-header{
+    padding: 0px !important;
+}
+.ivu-layout-content{
+    width:100%;
+    max-width: 1024px;
 }
 .ivu-tag-text{
     display: flex;

@@ -1,15 +1,14 @@
 <template>
    <div class="home-page">
         <Row justify="center">
-            <Col :xs="{ span: 22, offset: 1 }" :ms="{ span: 22, offset: 1 }" :md="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 0 }">
+             <Col :xs="{ span: 24, offset: 0 }" :ms="{ span: 24, offset: 0 }" :md="{ span: 24, offset: 0 }" :lg="{ span: 16, offset: 1 }">
                <mlist @handle="articleDetail" :list="list"></mlist> 
-               <mLoadingBut :loading="loading" @handle="loadMore"></mLoadingBut>
+               <m-loading-but :loading="loading" @handle="loadMore"></m-loading-but>
             </Col>
-            <Col  :xs="{ span: 22, offset: 1 }" :ms="{ span: 22, offset: 1 }" :md="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
+            <Col  :xs="{ span: 24, offset: 0 }" :ms="{ span: 24, offset: 0 }" :md="{ span: 24, offset: 0 }" :lg="{ span: 6,offset: 1}">
                 <div class="aside-right">
                      <Affix :offset-top="90">
                         <m-article-type></m-article-type>
-                        <!-- <m-type-tag></m-type-tag> -->
                      </Affix>
                 </div>
             </Col>
