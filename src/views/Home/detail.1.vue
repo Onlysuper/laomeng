@@ -2,21 +2,18 @@
    <div >
         <Row justify="center">
 
-            <Col class="code" :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
-                <div v-highlight>
-                    <pre>
-                        <code v-html="markedHtml" class="javascript">
-                            
-                        </code>
-                    </pre>
+            <Col v-highlight :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
+                {{article}}
+                <div v-html="htmValue">
+                 
                 </div>
-                <input type="text" v-model="inputHtml">
+                <input type="text" v-model="htmValue1">
             </Col>
 
 
 
             <Col  :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
-                <div class="aside-right">s
+                <div class="aside-right">
                      <Affix :offset-top="90">
                         <m-Article-Author></m-Article-Author>
                         <m-Article></m-Article>
@@ -31,6 +28,8 @@
 @import "../../assets/scss/global.scss";
 </style>
 <script>
+import Hljs from 'highlight.js';
+import 'highlight.js/styles/googlecode.css' //样式文件
 import marked from 'marked'
 import { getArticleDetail } from "@/http/api"
 import mArticleAuthor from  "@/components/m-Article-Author/index.vue";
@@ -42,8 +41,8 @@ export default {
     },
     data(){
        return {
-           markedHtml:"",
-           inputHtml:"",
+           htmValue:"",
+           htmValue1:"",
            article:{}
        }
     },
@@ -60,25 +59,26 @@ export default {
     mounted(){
         marked.setOptions({
             renderer: new marked.Renderer(),
+            highlight: function(code) {
+                return Hljs.highlightAuto(code).value;
+            },
+            pedantic: false,
             gfm: true,
             tables: true,
             breaks: false,
-            pedantic: false,
             sanitize: false,
             smartLists: true,
             smartypants: false,
-            highlight: function (block) {
-                return highlight.highlightAuto(code).value;
+            xhtml: false
             }
-        });
-        this.markedHtml = marked(this.inputHtml)
+        );
+        this.htmValue = marked(this.htmValue1)
         this.init();
     },
     watch:{
-        inputHtml(value){
-           this.$nextTick(()=>{
-                this.markedHtml = marked(value)
-           })
+        htmValue1(value){
+           this.htmValue = marked(value)
+         
         }
     }
 }
