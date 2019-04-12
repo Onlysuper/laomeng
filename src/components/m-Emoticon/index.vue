@@ -1,20 +1,30 @@
 <!-- 表情包 -->
 <template>
-    <div class="EmoticonListCover" v-if="Show" @click="OpenEmotion(false)">
-        <div class="EmoticonList">
-            <div class="PicItem" v-for="(item,i) in EmotionList" @click="ClickEmoticon(i)" :key="i">
-                <img :src=" 'https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/' + i + '.gif'">
+<div>
+    <Poptip  placement="bottom-start" width="400">
+        <Button>Click</Button>
+        <div class="api" slot="content">
+            <div class="m-emoticon-list">
+                <span class="PicItem" v-for="(item,i) in EmotionList" @click="ClickEmoticon(i)" :key="i">
+                    <img :src=" 'https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/' + i + '.gif'">
+                </span>
             </div>
         </div>
-    </div>
+    </Poptip>
+</div>
 </template>
+<style lang="scss">
+.m-emoticon-list{
+    width:200px;
+    height: 200px;
+}
+</style>
 
 <script>
   export default {
     name: "Emotion",
     data:function(){
       return {
-        Show:false,
         EmotionList:['微笑', '撇嘴', '色', '发呆', '得意', '流泪', '害羞', '闭嘴', '睡', '大哭',
           '尴尬', '发怒', '调皮', '呲牙', '惊讶', '难过', '酷', '冷汗', '抓狂', '吐', '偷笑', '可爱',
           '白眼', '傲慢', '饥饿', '困', '惊恐', '流汗', '憨笑', '大兵', '奋斗', '咒骂', '疑问', '嘘',
@@ -32,9 +42,6 @@
         var That = this;
         That.Show = false;
         That.$emit('AppendInputValue','[[' + That.EmotionList[EmoticonNo] + ']]');
-      },
-      OpenEmotion:function (Value) {
-        this.Show = Value;
       }
     }
   }

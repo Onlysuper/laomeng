@@ -16,9 +16,7 @@
                 </div>
                 <div class="m-textarea-foot">
                     <div>
-                        <span class="EmotionButton" @click="OpenEmotions()">
-                            表情
-                        </span>
+                        <m-emoticon @AppendInputValue="AppendMessageText"></m-emoticon>
                     </div>
                     <div>
                         <Button  type="primary">确定</Button>
@@ -42,7 +40,6 @@
                 </div>
             </div>
         </div>
-        <m-emoticon ref="EmotionB" @AppendInputValue="AppendMessageText"></m-emoticon>
     </div>
 </template>
 <script>
@@ -57,10 +54,6 @@ export default {
         mEmoticon
      },
      methods:{
-        // 打开表情包弹框
-       OpenEmotions:function () {
-         this.$refs.EmotionB.OpenEmotion(true);
-       },
          //表情选中后追加在input
        AppendMessageText:function (EmotionChinese) {
          this.leavemessage += EmotionChinese;
