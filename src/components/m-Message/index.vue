@@ -12,11 +12,13 @@
             </div>
             <div class="m-textarea">
                 <div>
-                    <Input type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Enter something..."></Input>
+                    <Input v-model="leavemessage" type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Enter something..."></Input>
                 </div>
                 <div class="m-textarea-foot">
                     <div>
-
+                        <span class="EmotionButton" @click="OpenEmotions()">
+                            表情
+                        </span>
                     </div>
                     <div>
                         <Button  type="primary">确定</Button>
@@ -40,56 +42,33 @@
                 </div>
             </div>
         </div>
-        <div class="m-common-container">
-            <div class="m-common-list">
-                <div class="m-img-box">
-                    <img  :src="require('@/assets/img/chinese.png')" alt="">
-                </div>
-                <div class="m-content">
-                    <p class="m-head">
-                        <span class="m-nickname">k.cohen </span>
-                        <time>03-12 11:58</time>
-                    </p>
-                    <div class="m-body">
-                        怎么没有帖出来那张脑图。
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="m-common-container">
-            <div class="m-common-list">
-                <div class="m-img-box">
-                    <img  :src="require('@/assets/img/chinese.png')" alt="">
-                </div>
-                <div class="m-content">
-                    <p class="m-head">
-                        <span class="m-nickname">k.cohen </span>
-                        <time>03-12 11:58</time>
-                    </p>
-                    <div class="m-body">
-                        怎么没有帖出来那张脑图。
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="m-common-container">
-            <div class="m-common-list">
-                <div class="m-img-box">
-                    <img  :src="require('@/assets/img/chinese.png')" alt="">
-                </div>
-                <div class="m-content">
-                    <p class="m-head">
-                        <span class="m-nickname">k.cohen </span>
-                        <time>03-12 11:58</time>
-                    </p>
-                    <div class="m-body">
-                        怎么没有帖出来那张脑图。
-                    </div>
-                </div>
-            </div>
-        </div>
+        <m-emoticon ref="EmotionB" @AppendInputValue="AppendMessageText"></m-emoticon>
     </div>
 </template>
+<script>
+import mEmoticon from  "@/components/m-Emoticon/index.vue";
+export default {
+    data(){
+        return {
+            leavemessage:""
+        }
+    },
+     components:{
+        mEmoticon
+     },
+     methods:{
+        // 打开表情包弹框
+       OpenEmotions:function () {
+         this.$refs.EmotionB.OpenEmotion(true);
+       },
+         //表情选中后追加在input
+       AppendMessageText:function (EmotionChinese) {
+         this.leavemessage += EmotionChinese;
+       }
+     }
+}
+</script>
+
 <style lang="scss">
 @import "../../assets/scss/global.scss";
 .m-message-page{
