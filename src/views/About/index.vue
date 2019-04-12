@@ -35,7 +35,7 @@
 </template>
 <style lang='scss'>
 .m-about-page{
-  max-width: 900px;
+  max-width: 1024px;
   margin: 0 auto;
   .m-header{
     height:250px;

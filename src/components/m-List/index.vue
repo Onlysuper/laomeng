@@ -17,7 +17,10 @@
                 </div>
                 <div class="footer">
                     <div>
-                        <Tag type="border">标签三</Tag>
+                        <Tag type="border">
+                            <img src="https://file.iviewui.com/dev/tag/tag-iview.png" alt="">
+                            iview
+                        </Tag>
                     </div>
                     <div>
                        <span class="comment-icon">
@@ -64,10 +67,11 @@
             flex-direction: row;
             justify-content: space-between;
             .comment-icon{
+                cursor: pointer;
                 color:$main-color;
-                icon{
-                    
-                }
+            }
+            .ivu-tag{
+                cursor: pointer;
             }
         }
     }
