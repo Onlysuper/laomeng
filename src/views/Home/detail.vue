@@ -4,11 +4,9 @@
 
             <Col class="code" :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
                 <div v-highlight>
-                    <pre>
-                        <code v-html="markedHtml" class="javascript">
+                        <div v-html="markedHtml" class="javascript">
                             
-                        </code>
-                    </pre>
+                        </div>
                 </div>
                 <input type="text" v-model="inputHtml">
             </Col>
