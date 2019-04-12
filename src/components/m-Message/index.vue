@@ -4,7 +4,8 @@
         <div class="m-leave-box">
             <div class="m-head">
                 <div class="img-box">
-                    <img  :src="require('@/assets/img/chinese.png')" alt="">
+                     <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
+                    <!-- <img  :src="require('@/assets/img/chinese.png')" alt=""> -->
                 </div>
                 <div class="content-box">
                     一只老萌
@@ -27,8 +28,8 @@
         </div>
         <div class="m-common-container">
             <div class="m-common-list">
-                <div class="m-img-box">
-                    <img  :src="require('@/assets/img/chinese.png')" alt="">
+                <div  class="m-img-box">
+                    <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
                 </div>
                 <div class="m-content">
                     <p class="m-head">
@@ -82,28 +83,21 @@ export default {
                 height: 42px;
                 position: absolute;
                 left: 9px;
-                top: 30px;
+                top: 32px;
                 z-index: 11;
-                img{
-                    border-radius: 42px;
-                    display: block;
-                    width: 42px;
-                    height: 100%;
-                }
             }
             .content-box{
                 position: absolute;
-                top: 15px;
+                top: 17px;
                 right: 0px;
                 left:51px;
                 display: flex;
                 align-items: center;
                 height: 100%;
-                padding-left: 10px;
+                padding-left: 6px;
             }
         }
         .m-textarea{
-            
             textarea,.textarea{
                 display: inline-block;
                 border-radius: 10px;
@@ -137,14 +131,8 @@ export default {
             display: flex;
             flex-direction: row;
             .m-img-box{
-                 width: 42px;
+                width: 42px;
                 height: 42px;
-                img{
-                    border-radius: 42px;
-                    display: block;
-                    width: 42px;
-                    height: 100%;
-                }
             }
             .m-content{
                 padding-left: 10px;
