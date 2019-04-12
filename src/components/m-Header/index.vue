@@ -6,7 +6,7 @@
                     <div class="layout-logo"></div>
                 </div>
                 <div class="layout-nav">
-                     <MmenuMb mode="horizontal"></MmenuMb>
+                     <m-menu mode="horizontal"></m-menu>
                 </div>
                 <div class="header-right">
                     <slot name="search"></slot>
@@ -20,7 +20,8 @@
         </div>
         <slot name="searchmb"></slot>
         <Drawer  title="xxx"  placement="left" :closable="true" v-model="value1">
-            <MmenuMb mode="vertical"></MmenuMb>
+            <!-- <MmenuMb mode="vertical"></MmenuMb> -->
+             <m-menu mode="vertical"></m-menu>
         </Drawer>
     </div>
         
@@ -102,8 +103,8 @@
 }
 </style>
 <script>
-import Mmenu from  "@/components/m-Menu/index.vue";
-import MmenuMb from  "@/components/m-Menu-Mb/index.vue";
+// import Mmenu from  "@/components/m-Menu/index.vue";
+import mMenu from  "@/components/m-Menu/index.vue";
 import mLanguage from  "@/components/m-Language/index.vue";
 export default {
     data(){
@@ -112,8 +113,7 @@ export default {
         }
     },
     components:{
-        Mmenu,
-        MmenuMb,
+        mMenu,
         mLanguage
     }
 }
