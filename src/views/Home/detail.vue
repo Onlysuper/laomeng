@@ -4,13 +4,15 @@
             <Col class="code" :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
                 <div v-highlight>
                         <div v-html="markedHtml" class="javascript"></div>
+                        <m-message></m-message>
                 </div>
             </Col>
             <Col :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
                 <div class="aside-right">
                      <!-- <Affix :offset-top="90"> -->
-                        <m-Article-Author></m-Article-Author>
-                        <m-Article></m-Article>
+                        <m-article-Author></m-article-Author>
+                        <m-article></m-article>
+                        <m-describle></m-describle>
                      <!-- </Affix> -->
                 </div>
             </Col>
@@ -25,10 +27,14 @@ import marked from 'marked'
 import { getArticleDetail } from "@/http/api"
 import mArticleAuthor from  "@/components/m-Article-Author/index.vue";
 import mArticle from  "@/components/m-Article/index.vue";
+import mDescrible from  "@/components/m-Describle/index.vue";
+import mMessage from  "@/components/m-Message/index.vue";
 export default {
      components:{
         mArticleAuthor,
-        mArticle
+        mArticle,
+        mDescrible,
+        mMessage
     },
     data(){
        return {
