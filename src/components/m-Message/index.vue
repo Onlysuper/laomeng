@@ -12,7 +12,8 @@
             </div>
             <div class="m-textarea">
                 <div>
-                    <Input v-model="leavemessage" type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Enter something..."></Input>
+                    <!-- <Input v-model="leavemessage" type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Enter something..."></Input> -->
+                <p contenteditable="true" v-html="leavemessage"></p>
                 </div>
                 <div class="m-textarea-foot">
                     <div>

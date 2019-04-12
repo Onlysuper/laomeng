@@ -38,10 +38,11 @@
     },
     methods:{
       //选中表情
-      ClickEmoticon:function (EmoticonNo) {
+      ClickEmoticon:function (index) {
         var That = this;
         That.Show = false;
-        That.$emit('AppendInputValue','[[' + That.EmotionList[EmoticonNo] + ']]');
+        // That.$emit('AppendInputValue','[[' + That.EmotionList[index] + ']]');
+        That.$emit('AppendInputValue','<img src="https://res.wx.qq.com/mpres/htmledition/images/icon/emotion/' + index + '.gif" />');
       }
     }
   }
