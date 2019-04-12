@@ -22,7 +22,6 @@
 import mlist from  "@/components/m-List/index.vue";
 import mLoadingBut from  "@/components/m-Loading-But/index.vue";
 import mArticleType from  "@/components/m-Article-Type/index.vue";
-import mTypeTag from  "@/components/m-Type-Tag/index.vue";
 import {getArticleLists} from "@/http/api"
 export default {
     data(){
@@ -35,7 +34,6 @@ export default {
         mLoadingBut,
         mlist,
         mArticleType,
-        mTypeTag
     },
     methods:{
         // 加载更多

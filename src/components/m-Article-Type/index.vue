@@ -10,25 +10,30 @@
             </div>
             <RadioGroup v-model="articelType">
                 <Radio label="1">
-                    <!-- <Icon type="logo-apple"></Icon> -->
                     <span>全部</span>
                 </Radio>
                 <Radio label="2">
-                    <!-- <Icon type="logo-android"></Icon> -->
                     <span>精选</span>
                 </Radio>
             </RadioGroup>
         </div>
         <div class="m-card-body">
              <div class="title">
-                文章标签
+                标签
             </div>
             <div>
-              <Tag type="border">标签三</Tag>
-              <Tag type="border">标签三</Tag>
-              <Tag type="border">标签三</Tag>
-              <Tag type="border">标签三</Tag>
-              <Tag type="border">标签三</Tag>
+              <Tag type="border">
+                  <img src="https://file.iviewui.com/dev/tag/tag-iview.png" alt="">
+                  iview
+              </Tag>
+              <Tag type="border">
+                  <img src="https://file.iviewui.com/dev/tag/tag-iview.png" alt="">
+                  vue
+              </Tag>
+              <Tag type="border">
+                  <img src="https://file.iviewui.com/dev/tag/tag-iview.png" alt="">
+                  vuex
+              </Tag>
             </div>
         </div>
        

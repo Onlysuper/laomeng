@@ -5,6 +5,7 @@ import store from './store/index';
 import iView from 'iview';
 Vue.use(iView);
 import 'iview/dist/styles/iview.css';
+import '@/assets/icomoon/style.css';
 import Highlight from '@/components/Hightlight.js'
 Vue.use(Highlight)
 import i18n from '@/locale'
