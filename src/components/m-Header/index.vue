@@ -80,7 +80,8 @@
         justify-content: space-between;
         align-items: center;  
         .munu-but-mb{
-            flex:0 0  50px;
+            flex:0 0  30px;
+            font-size: 20px;
         }
     }
     
