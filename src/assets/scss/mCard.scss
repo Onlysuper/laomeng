@@ -1,0 +1,34 @@
+.m-card{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    &>.title{
+            border-bottom: 1px solid #e8eaec;
+            padding: 14px 10px;
+            line-height: 20px;
+            font-size: 14px;
+            color: #17233d;
+            font-weight: 700;
+            white-space: nowrap;
+            span{
+                vertical-align: middle;
+            }
+            .ivu-icon{
+                margin-right: 5px;
+            }
+    }
+    .m-card-body{
+        padding: 10px;
+        &>.title{
+            margin-bottom: 6px;
+            font-size: 14px;
+            
+        }
+        p{
+            padding-left: 6px;
+            margin-top: 4px;
+            font-size: 14px;
+        }
+    }
+}

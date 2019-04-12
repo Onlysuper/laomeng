@@ -1,45 +1,44 @@
 <template>
-    <article class="m-list">
-        <h1>关于作者</h1>
-        <div>
-            Aresn
+    <article class="m-card">
+        <div class="title">
+            <!-- <Icon type="ios-options" /> -->
+            <span>文章作者</span>
         </div>
-        <div>
-            <div>
-                <p>文章</p>
-                <p>100</p>
-            </div>
+        <div class="m-card-body">
+          <div class="user-box">
+              <div class="img-box">
+                  <img :src="require('@/assets/img/chinese.png')" alt="">
+              </div>
+              <div class="name-box">
+                  曹天骄
+              </div>
+          </div>
         </div>
     </article>
 </template>
 <style lang="scss" scoped>
-.m-list{
-    padding: 20px;
-    background: #fff;
+@import "../../assets/scss/global.scss";
+@import "../../assets/scss/mCard.scss";
+.user-box{
     display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    h1{
-
-    }
-    .content{
-        display: flex;
-        flex-direction: row;
-        p{
-            flex:1
-        }
-        .img-wrap{
-            flex: 0 0 200px;
-            img{
-                max-width: 100%;
-            }
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .img-box{
+        width: 100px;
+        // height: 100px;
+        text-align: center;
+        padding-right: 10px;
+        img{
+            max-width: 100%;
+            max-height: 100%;
         }
     }
-    .footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    .name-box{
+        font-size: 16px;
+        font-weight: bold;
     }
 }
 </style>
+
 

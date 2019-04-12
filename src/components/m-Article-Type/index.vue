@@ -36,32 +36,7 @@
 </template>
 <style lang="scss" scoped>
 @import "../../assets/scss/global.scss";
-.m-card{
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    &>.title{
-            border-bottom: 1px solid #e8eaec;
-            padding: 14px 16px;
-            line-height: 20px;
-            font-size: 14px;
-            color: #17233d;
-            font-weight: 700;
-            white-space: nowrap;
-            span{
-                padding-left: 5px;
-                vertical-align: middle;
-            }
-    }
-    .m-card-body{
-        padding: 10px;
-        &>.title{
-            margin-bottom: 6px;
-            font-size: 14px;
-        }
-    }
-}
+@import "../../assets/scss/mCard.scss";
 </style>
 <script>
 export default {

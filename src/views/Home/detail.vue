@@ -1,28 +1,20 @@
 <template>
    <div >
         <Row justify="center">
-
             <Col class="code" :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
                 <div v-highlight>
-                        <div v-html="markedHtml" class="javascript">
-                            
-                        </div>
+                        <div v-html="markedHtml" class="javascript"></div>
                 </div>
-                <input type="text" v-model="inputHtml">
             </Col>
-
-
-
-            <Col  :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
-                <div class="aside-right">s
-                     <Affix :offset-top="90">
+            <Col :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
+                <div class="aside-right">
+                     <!-- <Affix :offset-top="90"> -->
                         <m-Article-Author></m-Article-Author>
                         <m-Article></m-Article>
-                     </Affix>
+                     <!-- </Affix> -->
                 </div>
             </Col>
         </Row>
-       
    </div>
 </template>
 <style lang='scss'>
@@ -41,16 +33,14 @@ export default {
     data(){
        return {
            markedHtml:"",
-           inputHtml:"",
-           article:{}
+           inputHtml:""
        }
     },
     methods:{
         init(){
             getArticleDetail()({}).then(res=>{
-                console.log(res);
                 if(res.code=='00'){
-                    this.article=res.data
+                    this.inputHtml = res.data.content;
                 }
             })
         }

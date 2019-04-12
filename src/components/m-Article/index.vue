@@ -1,45 +1,30 @@
 <template>
-    <article class="m-list">
-        <h1>文章信息</h1>
-        <div>
-            <p>发布时间：19天前</p>
-            <p>阅读数：331</p>
-            <div>
-                 <Tag type="border">标签三</Tag>
-                  <Tag type="border">标签三</Tag>
-                   <Tag type="border">标签三</Tag>
-            </div>
+    <article class="m-card">
+        <div class="title">
+            <!-- <Icon type="ios-options" /> -->
+            <span>文章信息</span>
+        </div>
+        <div class="m-card-body">
+            <p><Icon type="ios-time-outline" />发表时间：08-25 21:01</p>
+            <p><Icon type="ios-book-outline" />阅读数：2807</p>
+        </div>
+        <div class="m-card-body">
+            <Tag type="border">
+                 <img src="https://file.iviewui.com/dev/tag/tag-iview.png" alt="">
+                 vue
+            </Tag>
+            <Tag type="border">
+                 <img src="https://file.iviewui.com/dev/tag/tag-iview.png" alt="">
+                 iview
+            </Tag>
         </div>
     </article>
 </template>
 <style lang="scss" scoped>
-.m-list{
-    padding: 20px;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    h1{
-
-    }
-    .content{
-        display: flex;
-        flex-direction: row;
-        p{
-            flex:1
-        }
-        .img-wrap{
-            flex: 0 0 200px;
-            img{
-                max-width: 100%;
-            }
-        }
-    }
-    .footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+@import "../../assets/scss/global.scss";
+@import "../../assets/scss/mCard.scss";
+.ivu-icon{
+    padding-right: 10px;
 }
 </style>
 

@@ -1,11 +1,5 @@
 
 
-body{
-    background-color: #f8f8f9 !important;
-}
-input,input:focus,input:link,input:hover{
-    outline: none;
-}
 $main-color:#cc6699;
 $main-color2:#f2f8fd;
 $m-color1:#333;
@@ -14,3 +8,33 @@ $m-color3:#999;
 $m-color4:#e5e5e5;
 $m-color5:#f2f2f2;
 $m-color6:#ffffff;
+@mixin flex-row {
+   display: flex;
+   flex-direction: row;
+}
+
+@mixin bottom-border {
+   border-bottom: 1px solid $m-color3
+}
+@mixin top-border {
+    border-bottom: 1px solid $m-color3
+}
+
+// 重置样式
+body{
+    background-color: #f8f8f9 !important;
+    font-size: 14px;
+}
+input,input:focus,input:link,input:hover{
+    outline: none;
+}
+.ivu-tag-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 12px;
+        height: 12px;
+        margin-right: 3px
+    }
+}

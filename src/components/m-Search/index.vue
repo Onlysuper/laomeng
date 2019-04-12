@@ -1,6 +1,6 @@
 <template>
     <div class="serch-container">
-        <input type="text" placeholder="输入搜索文字">
+         <input  :placeholder="$t('searchPlaceholder')" type="text">
         <a href="#" onclick="return false;" class="go"></a>
     </div>
 </template>

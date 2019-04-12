@@ -3,7 +3,7 @@
        <!-- <div class="logoback">
            logo
        </div> -->
-       <input   placeholder="请输入搜索内容" type="text">
+        <input  :placeholder="$t('searchPlaceholder')" type="text">
        <span class="search-button" @click="searchClick" href="search-button">
            <Icon type="ios-search" />
        </span>

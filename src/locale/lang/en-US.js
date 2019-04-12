@@ -2,5 +2,6 @@ export default {
   home: 'Home',
   technology: 'technology',
   life:"life",
-  about:"about"
+  about:"about",
+  searchPlaceholder:"input search content"
 }
