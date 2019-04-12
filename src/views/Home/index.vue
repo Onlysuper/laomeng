@@ -1,7 +1,7 @@
 <template>
    <div class="home-page">
         <Row justify="center">
-            <Col :xs="{ span: 22, offset: 1 }" :ms="{ span: 22, offset: 1 }" :md="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
+            <Col :xs="{ span: 22, offset: 1 }" :ms="{ span: 22, offset: 1 }" :md="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 0 }">
                <mlist @handle="articleDetail" :list="list"></mlist> 
                <mLoadingBut :loading="loading" @handle="loadMore"></mLoadingBut>
             </Col>

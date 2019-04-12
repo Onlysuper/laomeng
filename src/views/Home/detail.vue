@@ -1,13 +1,13 @@
 <template>
    <div >
         <Row justify="center">
-            <Col class="code" :xs="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 2 }">
+            <Col :xs="{ span: 22, offset: 1 }" :ms="{ span: 22, offset: 1 }" :md="{ span: 22, offset: 1 }" :lg="{ span: 14, offset: 0 }">
                 <div v-highlight>
                         <div v-html="markedHtml" class="javascript"></div>
                         <m-message></m-message>
                 </div>
             </Col>
-            <Col :xs="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
+             <Col  :xs="{ span: 22, offset: 1 }" :ms="{ span: 22, offset: 1 }" :md="{ span: 22, offset: 1 }" :lg="{ span: 6,offset: 0}">
                 <div class="aside-right">
                      <!-- <Affix :offset-top="90"> -->
                         <m-article-Author></m-article-Author>
