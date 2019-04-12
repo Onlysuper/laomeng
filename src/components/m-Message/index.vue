@@ -11,16 +11,16 @@
                 </div>
             </div>
             <div class="m-textarea">
-                <div>
+                <div class="textarea">
                     <!-- <Input v-model="leavemessage" type="textarea" :autosize="{minRows: 5,maxRows: 5}" placeholder="Enter something..."></Input> -->
-                <p contenteditable="true" v-html="leavemessage"></p>
+                    <p contenteditable="true" v-html="leavemessage"></p>
                 </div>
                 <div class="m-textarea-foot">
                     <div>
                         <m-emoticon @AppendInputValue="AppendMessageText"></m-emoticon>
                     </div>
                     <div>
-                        <Button  type="primary">确定</Button>
+                        <Button>发表</Button>
                     </div>
                 </div>
             </div>
@@ -103,11 +103,20 @@ export default {
             }
         }
         .m-textarea{
-            // height: 100px;
-            // border: 1px solid $main-color;
-            border-radius: 10px;
-            textarea{
+            
+            textarea,.textarea{
+                display: inline-block;
+                border-radius: 10px;
+                height: 100px;
+                width: 100%;
                 padding-top:15px;
+                border: 1px solid $m-color3;
+                p{
+                    height: 100%;
+                    width: 100%;
+                    outline: none;
+                    padding: 10px;
+                }
             }
             .m-textarea-foot{
                 display: flex;

@@ -2,7 +2,7 @@
 <template>
 <div>
     <Poptip  placement="bottom-start" width="400">
-        <Button>Click</Button>
+        <Icon style="font-size:30px" type="ios-sad-outline" />
         <div class="api" slot="content">
             <div class="m-emoticon-list">
                 <span class="PicItem" v-for="(item,i) in EmotionList" @click="ClickEmoticon(i)" :key="i">
@@ -15,8 +15,11 @@
 </template>
 <style lang="scss">
 .m-emoticon-list{
-    width:200px;
     height: 200px;
+    white-space: normal;
+    span{
+        display: inline
+    }
 }
 </style>
 
