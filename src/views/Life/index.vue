@@ -5,6 +5,8 @@
         <p class="time">1976年</p>
         <div class="m-body">
           <div class="m-content">
+            <Row justify="center">
+             <Col :xs="{ span: 24, offset: 0 }" :ms="{ span: 24, offset: 0 }" :md="{ span: 6, offset: 0 }" :lg="{ span: 6, offset: 0 }">
               <div class="m-imgbox">
                 <span>
                   <img :src="require('@/assets/img/chinese.png')" alt="">
@@ -16,64 +18,20 @@
                   <img :src="require('@/assets/img/chinese.png')" alt="">
                 </span>
               </div>
+              </Col>
+            <Col  :xs="{ span: 24, offset: 0 }" :ms="{ span: 24, offset: 0 }" :md="{ span: 17, offset: 0 }" :lg="{ span: 17,offset: 0}">
               <div class="m-text">
                  <h2 class="m-title">今天天气真不错</h2>
                  <p>
                   今天天气真不错今天天气真不错今天天气真不错今天天气真不错
                  </p>
               </div>
+               </Col>
+            </Row>
           </div>
         </div>
       </TimelineItem>
-      <TimelineItem>
-        <p class="time">1976年</p>
-        <div  class="m-body">
-           <div class="m-content">
-              <div class="m-imgbox">
-                <span>
-                  <img :src="require('@/assets/img/chinese.png')" alt="">
-                </span>
-               
-              </div>
-              <div class="m-text">
-                 <h2 class="m-title">今天天气真不错</h2>
-                 <p>
-                  今天天气真不错今天天气真不错今天天气真不错今天天气真不错
-                 </p>
-              </div>
-          </div>
-        </div>
-      </TimelineItem>
-      <TimelineItem>
-         <p class="time">1976年</p>
-         <div  class="m-body">
-           <div class="m-content">
-              <div class="m-imgbox">
-                  <span>
-                    <img :src="require('@/assets/img/chinese.png')" alt="">
-                  </span>
-                  <span>
-                    <img :src="require('@/assets/img/chinese.png')" alt="">
-                  </span>
-                </div>
-                <div class="m-text">
-                  <h2 class="m-title">今天天气真不错</h2>
-                  <p>
-                    今天天气真不错今天天气真不错今天天气真不错今天天气真不错
-                  </p>
-                </div>
-            </div>
-         </div>
-      </TimelineItem>
-      <TimelineItem color="green">
-         <p class="time">1976年</p>
-         <div  class="m-body">
-            <h2 class="m-title">今天天气真不错</h2>
-            <div class="m-content">
-                今天天气真不错
-            </div>
-         </div>
-      </TimelineItem>
+     
   </Timeline>
    <m-loading-but :loading="loading" @handle="loadMore"></m-loading-but>
   
@@ -114,11 +72,12 @@ export default {
     .m-content{
       display: flex;
       .m-imgbox{
-        flex:0 0 250px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         span{
-          flex:1 0 100px;
+          flex:1;
+          min-width: 50px;
           margin-right: 10px;
           img{
             max-width: 100%;
