@@ -16,12 +16,12 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: () => import(/* webpackChunkName: "about" */ '../views/Login/index.vue'),
+      component: () => import(/* webpackChunkName: "login" */ '../views/Login/index.vue'),
     },
     {
       path: '/articleDetail',
       name: 'articleDetail',
-      component: () => import(/* webpackChunkName: "about" */ '../views/Home/detail.vue'),
+      component: () => import(/* webpackChunkName: "articleDetail" */ '../views/Home/detail.vue'),
     },
     {
       path: '/about',
@@ -31,12 +31,12 @@ export default new Router({
     {
       path: '/life',
       name: 'life',
-      component: () => import(/* webpackChunkName: "about" */ '../views/Life/index.vue'),
+      component: () => import(/* webpackChunkName: "life" */ '../views/Life/index.vue'),
     },
     {
       path: '/technology',
       name: 'technology',
-      component: () => import(/* webpackChunkName: "about" */ '../views/Technology/index.vue'),
+      component: () => import(/* webpackChunkName: "technology" */ '../views/Technology/index.vue'),
     }
   ],
 });
