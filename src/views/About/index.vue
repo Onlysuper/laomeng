@@ -43,6 +43,7 @@
     flex-direction: column;
     justify-content: flex-end;
     background:#eee;
+    padding: 0 30px;
     .m-container{
       height: 150px;
       display: flex;
@@ -51,6 +52,7 @@
         flex: 0 0 150px;
         height: 150px;
         background:#888;
+        border-radius: 5px;
         img{
           max-width: 100%;
           max-height: 100%;

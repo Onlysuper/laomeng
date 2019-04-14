@@ -3,10 +3,10 @@
         <MenuItem @click.native="goUrl('./')" name="1">
              {{ $t("home") }}
         </MenuItem>
-        <MenuItem @click.native="goUrl('./')" name="2">
+        <MenuItem @click.native="goUrl('./technology')" name="2">
              {{ $t("technology") }}
         </MenuItem>
-        <MenuItem @click.native="goUrl('./')" name="3">
+        <MenuItem @click.native="goUrl('./life')" name="3">
             {{ $t("life") }}
         </MenuItem>
         <MenuItem @click.native="goUrl('./about')" name="4">

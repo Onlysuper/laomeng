@@ -19,7 +19,7 @@
          <Icon @click="value1 = true" type="ios-menu" />
         </div>
         <slot name="searchmb"></slot>
-        <Drawer  title="xxx"  placement="left" :closable="true" v-model="value1">
+        <Drawer  title="一只老萌"  placement="left" :closable="true" v-model="value1">
             <!-- <MmenuMb mode="vertical"></MmenuMb> -->
              <m-menu mode="vertical"></m-menu>
         </Drawer>
