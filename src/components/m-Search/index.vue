@@ -10,7 +10,9 @@
     display: inline-block;
     position: relative;
     margin-left: 20px;
-    width: 326px;
+    max-width: 326px;
+    min-width: 130px;
+    flex: 1;
     input,input:focus,input:active{
         background: #fff;
         border:0;

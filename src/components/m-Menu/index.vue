@@ -17,6 +17,9 @@
 </template>
 <style lang="scss">
 @import "../../assets/scss/global.scss";
+.ivu-menu-horizontal .ivu-menu-item{
+        padding: 0 12px !important;
+}
 .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-item-active, .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-item:hover, .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-submenu-active, .ivu-menu-dark.ivu-menu-horizontal .ivu-menu-submenu:hover{
     color:$main-color;
     border:0px !important;
