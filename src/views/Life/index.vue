@@ -5,8 +5,8 @@
         <p class="time">1976年</p>
         <div class="m-body">
           <div class="m-content">
-            <Row justify="center">
-             <Col :xs="{ span: 24, offset: 0 }" :ms="{ span: 24, offset: 0 }" :md="{ span: 6, offset: 0 }" :lg="{ span: 6, offset: 0 }">
+            <!-- <Row justify="center"> -->
+             <!-- <Col :xs="{ span: 24, offset: 0 }" :ms="{ span: 24, offset: 0 }" :md="{ span: 6, offset: 0 }" :lg="{ span: 6, offset: 0 }"> -->
               <div class="m-imgbox">
                 <span>
                   <img :src="require('@/assets/img/chinese.png')" alt="">
@@ -18,16 +18,16 @@
                   <img :src="require('@/assets/img/chinese.png')" alt="">
                 </span>
               </div>
-              </Col>
-            <Col  :xs="{ span: 24, offset: 0 }" :ms="{ span: 24, offset: 0 }" :md="{ span: 17, offset: 0 }" :lg="{ span: 17,offset: 0}">
+              <!-- </Col> -->
+            <!-- <Col  :xs="{ span: 24, offset: 0 }" :ms="{ span: 24, offset: 0 }" :md="{ span: 17, offset: 0 }" :lg="{ span: 17,offset: 0}"> -->
               <div class="m-text">
                  <h2 class="m-title">今天天气真不错</h2>
                  <p>
                   今天天气真不错今天天气真不错今天天气真不错今天天气真不错
                  </p>
               </div>
-               </Col>
-            </Row>
+               <!-- </Col> -->
+            <!-- </Row> -->
           </div>
         </div>
       </TimelineItem>
@@ -72,12 +72,14 @@ export default {
     .m-content{
       display: flex;
       .m-imgbox{
-        width: 100%;
+        background: #fff;
+        width: 250px;
         display: flex;
         flex-wrap: wrap;
+       
         span{
           flex:1;
-          min-width: 50px;
+          min-width: 100px;
           margin-right: 10px;
           img{
             max-width: 100%;
@@ -86,6 +88,8 @@ export default {
         }
       }
       .m-text{
+        flex: 1;
+        padding-left: 30px;
         .m-title{
           font-weight: normal;
         }
@@ -93,6 +97,18 @@ export default {
           // margin-top: 10px;
         }
       }
+      @media screen and (max-width: 900px) {
+          &{
+             flex-direction: column;
+              .m-imgbox{
+                width: 100%;
+              }
+             .m-text{
+               padding-left: 0px !important;
+             }
+          }
+      }
+      
     }
     
   }
